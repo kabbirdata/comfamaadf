@@ -1,0 +1,42 @@
+{
+	"name": "archivo_plano_compras_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "compras.csv",
+				"folderPath": "AnaliticaSynapse",
+				"container": "bronce"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "fecha",
+				"type": "String"
+			},
+			{
+				"name": "item",
+				"type": "String"
+			},
+			{
+				"name": "cantidad",
+				"type": "String"
+			},
+			{
+				"name": "valor_compra",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

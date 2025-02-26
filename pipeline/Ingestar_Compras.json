@@ -1,0 +1,63 @@
+{
+	"name": "Ingestar_Compras",
+	"properties": {
+		"description": "Carga el CSV compras.csv de la carpeta AnaliticaSynapse del contenedor bronce (raw-data) y lo carga en la tabla compras de la base de datos SQL Server pocdbcomfama.database.windows.net / pocdbcomfama bronce.compras",
+		"activities": [
+			{
+				"name": "copiar_compras",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlMISink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "archivo_plano_compras_csv",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "tablaComprasenSQLServer",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-02-25T21:00:08Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

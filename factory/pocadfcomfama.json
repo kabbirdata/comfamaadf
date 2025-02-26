@@ -1,0 +1,9 @@
+{
+	"name": "pocadfcomfama",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1c254a8e-73b4-4572-ab14-4e0217e36c81",
+		"tenantId": "70dd513e-e828-4c9c-b54c-528312c6d774"
+	}
+}

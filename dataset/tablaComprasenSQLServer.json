@@ -1,0 +1,36 @@
+{
+	"name": "tablaComprasenSQLServer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bdcomfamaenSS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlMITable",
+		"schema": [
+			{
+				"name": "fecha",
+				"type": "char"
+			},
+			{
+				"name": "item",
+				"type": "text"
+			},
+			{
+				"name": "cantidad",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "valor_compra",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "bronce",
+			"table": "compras"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
