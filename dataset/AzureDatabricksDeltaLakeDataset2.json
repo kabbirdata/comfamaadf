@@ -1,0 +1,33 @@
+{
+	"name": "AzureDatabricksDeltaLakeDataset2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDatabricksDeltaLake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "default",
+			"table": "new_table"
+		},
+		"schema": [
+			{
+				"name": "fecha",
+				"type": "string"
+			},
+			{
+				"name": "item",
+				"type": "string"
+			},
+			{
+				"name": "cantidad",
+				"type": "string"
+			},
+			{
+				"name": "valor_compra",
+				"type": "string"
+			}
+		]
+	}
+}
