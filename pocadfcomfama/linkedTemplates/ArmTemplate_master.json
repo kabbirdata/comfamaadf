@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'bdcomfamaenSS'"
 		},
+		"AzureDatabricksDeltaLake1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
+		},
 		"bdcomfamaenSS_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "pocdbcomfama.database.windows.net"
@@ -59,6 +63,9 @@
 					},
 					"bdcomfamaenSS_password": {
 						"value": "[parameters('bdcomfamaenSS_password')]"
+					},
+					"AzureDatabricksDeltaLake1_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
 					},
 					"bdcomfamaenSS_properties_typeProperties_server": {
 						"value": "[parameters('bdcomfamaenSS_properties_typeProperties_server')]"
