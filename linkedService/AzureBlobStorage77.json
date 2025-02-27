@@ -1,0 +1,11 @@
+{
+	"name": "AzureBlobStorage77",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"containerUri": "https://anystadbricks.blob.core.windows.net/anystadbrickscon",
+			"authenticationType": "Anonymous"
+		}
+	}
+}
