@@ -1,0 +1,29 @@
+{
+	"name": "blob77",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage77",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "compras.csv",
+				"folderPath": "anystadbrickscar",
+				"container": "anystadbrickscon"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "fecha;item;cantidad;valor_compra",
+				"type": "String"
+			}
+		]
+	}
+}

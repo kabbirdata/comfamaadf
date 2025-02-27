@@ -36,7 +36,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "csvV2",
+						"referenceName": "blob77",
 						"type": "DatasetReference"
 					}
 				],
