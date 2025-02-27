@@ -19,6 +19,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
 		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureDatabricksDeltaLakeFinal_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLakeFinal'"
+		},
 		"bdcomfamaenSS_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "pocdbcomfama.database.windows.net"
@@ -66,6 +74,12 @@
 					},
 					"AzureDatabricksDeltaLake1_accessToken": {
 						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureDatabricksDeltaLakeFinal_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLakeFinal_accessToken')]"
 					},
 					"bdcomfamaenSS_properties_typeProperties_server": {
 						"value": "[parameters('bdcomfamaenSS_properties_typeProperties_server')]"

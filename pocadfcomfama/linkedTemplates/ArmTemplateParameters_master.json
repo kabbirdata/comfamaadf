@@ -14,6 +14,12 @@
 		"AzureDatabricksDeltaLake1_accessToken": {
 			"value": ""
 		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLakeFinal_accessToken": {
+			"value": ""
+		},
 		"bdcomfamaenSS_properties_typeProperties_server": {
 			"value": "pocdbcomfama.database.windows.net"
 		},
