@@ -124,7 +124,6 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": "compras.csv",
-						"folderPath": "AnaliticaSynapse",
 						"container": "bronce"
 					},
 					"columnDelimiter": ";",
