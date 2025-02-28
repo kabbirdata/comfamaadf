@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "ingestar_databricks",
 	"properties": {
 		"activities": [
 			{
@@ -26,11 +26,23 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
+					"sink": {
+						"type": "AzureDatabricksDeltaLakeSink",
+						"importSettings": {
+							"type": "AzureDatabricksDeltaLakeImportCommand"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "todatabricks",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "deltabricks",
 						"type": "DatasetReference"
 					}
 				]
