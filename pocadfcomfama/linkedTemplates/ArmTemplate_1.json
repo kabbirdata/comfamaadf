@@ -124,8 +124,8 @@
 					"location": {
 						"type": "AzureBlobStorageLocation",
 						"fileName": "compras.csv",
-						"folderPath": "carpebricks",
-						"container": "parabricks"
+						"folderPath": "anystadbrickscar",
+						"container": "anystadbrickscon"
 					},
 					"columnDelimiter": ";",
 					"escapeChar": "\\",

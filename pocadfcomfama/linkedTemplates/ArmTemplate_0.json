@@ -47,10 +47,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'tokenfinalLS'"
 		},
-		"linkedservicebricks_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'linkedservicebricks'"
-		},
 		"linkedservibricks_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'linkedservibricks'"
@@ -271,7 +267,8 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"connectionString": "[parameters('linkedservicebricks_connectionString')]"
+					"containerUri": "https://anystadbricks.blob.core.windows.net/anystadbrickscon",
+					"authenticationType": "Anonymous"
 				}
 			},
 			"dependsOn": []

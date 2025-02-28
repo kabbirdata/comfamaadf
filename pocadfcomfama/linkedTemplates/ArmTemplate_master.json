@@ -47,10 +47,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'tokenfinalLS'"
 		},
-		"linkedservicebricks_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'linkedservicebricks'"
-		},
 		"linkedservibricks_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'linkedservibricks'"
@@ -123,9 +119,6 @@
 					},
 					"tokenfinalLS_accessToken": {
 						"value": "[parameters('tokenfinalLS_accessToken')]"
-					},
-					"linkedservicebricks_connectionString": {
-						"value": "[parameters('linkedservicebricks_connectionString')]"
 					},
 					"linkedservibricks_accessToken": {
 						"value": "[parameters('linkedservibricks_accessToken')]"
