@@ -11,8 +11,8 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "compras.csv",
-				"folderPath": "carpebricks",
-				"container": "parabricks"
+				"folderPath": "midata",
+				"container": "funpocstacon"
 			},
 			"columnDelimiter": ";",
 			"escapeChar": "\\",
