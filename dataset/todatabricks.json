@@ -1,0 +1,29 @@
+{
+	"name": "todatabricks",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedservicebricks",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "compras.csv",
+				"folderPath": "carpebricks",
+				"container": "parabricks"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "fecha;item;cantidad;valor_compra",
+				"type": "String"
+			}
+		]
+	}
+}
