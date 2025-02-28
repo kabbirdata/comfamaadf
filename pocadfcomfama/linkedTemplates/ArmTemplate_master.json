@@ -7,25 +7,53 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "pocadfcomfama"
 		},
+		"77Databricks77_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of '77Databricks77'"
+		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
-		},
-		"bdcomfamaenSS_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'bdcomfamaenSS'"
-		},
-		"AzureDatabricksDeltaLake1_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
 		},
 		"AzureBlobStorage2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
 		},
+		"AzureBlobStorage7_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage7'"
+		},
+		"AzureDatabricksDeltaLake1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
+		},
+		"AzureDatabricksDeltaLake2_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake2'"
+		},
 		"AzureDatabricksDeltaLakeFinal_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLakeFinal'"
+		},
+		"bdcomfamaenSS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'bdcomfamaenSS'"
+		},
+		"newlsand_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'newlsand'"
+		},
+		"tokenfinalLS_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'tokenfinalLS'"
+		},
+		"linkedservicebricks_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedservicebricks'"
+		},
+		"linkedservibricks_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'linkedservibricks'"
 		},
 		"bdcomfamaenSS_properties_typeProperties_server": {
 			"type": "string",
@@ -66,20 +94,41 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"77Databricks77_accessToken": {
+						"value": "[parameters('77Databricks77_accessToken')]"
+					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
-					},
-					"bdcomfamaenSS_password": {
-						"value": "[parameters('bdcomfamaenSS_password')]"
-					},
-					"AzureDatabricksDeltaLake1_accessToken": {
-						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
 					},
 					"AzureBlobStorage2_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_connectionString')]"
 					},
+					"AzureBlobStorage7_connectionString": {
+						"value": "[parameters('AzureBlobStorage7_connectionString')]"
+					},
+					"AzureDatabricksDeltaLake1_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
+					},
+					"AzureDatabricksDeltaLake2_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLake2_accessToken')]"
+					},
 					"AzureDatabricksDeltaLakeFinal_accessToken": {
 						"value": "[parameters('AzureDatabricksDeltaLakeFinal_accessToken')]"
+					},
+					"bdcomfamaenSS_password": {
+						"value": "[parameters('bdcomfamaenSS_password')]"
+					},
+					"newlsand_connectionString": {
+						"value": "[parameters('newlsand_connectionString')]"
+					},
+					"tokenfinalLS_accessToken": {
+						"value": "[parameters('tokenfinalLS_accessToken')]"
+					},
+					"linkedservicebricks_connectionString": {
+						"value": "[parameters('linkedservicebricks_connectionString')]"
+					},
+					"linkedservibricks_accessToken": {
+						"value": "[parameters('linkedservibricks_accessToken')]"
 					},
 					"bdcomfamaenSS_properties_typeProperties_server": {
 						"value": "[parameters('bdcomfamaenSS_properties_typeProperties_server')]"
@@ -93,6 +142,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "pocadfcomfama_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'pocadfcomfama_ArmTemplate_0')]"
+			]
 		}
 	]
 }
